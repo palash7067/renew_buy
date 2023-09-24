@@ -33,7 +33,7 @@ class _FeedScreenState extends State<FeedScreen> {
         builder: (context, state) {
           switch(state.runtimeType){
             case FeedFetchingLoadingState:
-              return const CustomLoadingWidget();
+              return const CustomLoadingWidget(key: Key('loadingState'));
 
             case FeedFetchingSuccessfulState:
               final successState = state as FeedFetchingSuccessfulState;

@@ -37,7 +37,7 @@ class FeedTile extends StatelessWidget {
               width: double.infinity,
               placeholder: (context, url) => const Padding(
                 padding: EdgeInsets.all(24),
-                child: Center(child: CircularProgressIndicator(),),
+                child: Center(child: CircularProgressIndicator(color: primaryColor),),
               ),
               errorWidget: (context, url, error) => SizedBox(
                 height: 20.h,

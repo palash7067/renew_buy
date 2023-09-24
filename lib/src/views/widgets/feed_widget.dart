@@ -17,6 +17,7 @@ class FeedWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return RefreshIndicator(
+      key: const Key('successState'),
       onRefresh: ()async{
         feedBloc.add(FeedInitialFetchEvent(isPullToRefresh: true));
       },

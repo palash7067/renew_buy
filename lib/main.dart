@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:renew_buy/core/theme/theme.dart';
 import 'package:renew_buy/core/utils/environment.dart';
@@ -8,6 +9,10 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: Environment.fileName);
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp, // Lock to portrait.
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(const MyApp());
 }
 
