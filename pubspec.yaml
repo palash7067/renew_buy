@@ -16,8 +16,24 @@ dependencies:
 
 
   #state_mngt_arch
+  dio: ^4.0.6
   bloc: ^8.1.2
   flutter_bloc: ^8.1.3
+  dartz: ^0.10.1
+  equatable: ^2.0.5
+
+  #ui
+  flutter_svg: ^2.0.7
+
+  #cache_local
+  cached_network_image: ^3.2.3
+
+  #responsive_ui
+  responsive_sizer: ^3.2.0
+
+  #project_config
+  flutter_dotenv: ^5.0.2
+  logger: ^2.0.2
 
 
 dev_dependencies:
@@ -35,17 +51,16 @@ flutter:
 
 
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Geologica
+      fonts:
+        - asset: assets/fonts/geologica/Geologica-Light.ttf
+          weight: 300
+        - asset: assets/fonts/geologica/Geologica-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/geologica/Geologica-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/geologica/Geologica-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/geologica/Geologica-Bold.ttf
+          weight: 700
