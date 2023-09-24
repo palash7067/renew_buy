@@ -3,6 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:renew_buy/core/theme/theme.dart';
 import 'package:renew_buy/core/utils/environment.dart';
 import 'package:renew_buy/src/views/screens/feed_screen.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,11 +16,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ApplicationTheme.getAppThemeData(),
-      home: const FeedScreen(),
+    return ResponsiveSizer(builder: (context, orientation, deviceType) {
+      return MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ApplicationTheme.getAppThemeData(),
+        home: const FeedScreen(),
+      );
+    }
     );
   }
 }
